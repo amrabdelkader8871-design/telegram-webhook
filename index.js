@@ -4,9 +4,10 @@ const app = express();
 app.use(express.json());
 
 app.post("/telegram-webhook", (req, res) => {
-  console.log("Telegram Update:", JSON.stringify(req.body));
+  console.log("Telegram Update:", req.body);
   res.sendStatus(200);
 });
+
 
 app.get("/", (req, res) => {
   res.send("Telegram bot is running ✅");
